@@ -1,4 +1,4 @@
-// Page Object to Store and Print Accuweather Forecast
+// Page Object to Retrieve, Store and Print Accuweather Forecast Data
 
 package Expleo.pageObjects;
 
@@ -14,8 +14,16 @@ public class AccuweatherPageObject {
         this.minTemp[index] = minTemp;
     }
 
+    public int getMaxTemp(int index) {
+        return this.maxTemp[index];
+    }
+
+    public int getMinTemp(int index) {
+        return this.minTemp[index];
+    }
+
     public void printBoth() {
         for (int i = 0; i < 5; i++)
-            System.out.println("Accuweather Day " + (i+1) + " Max: " + maxTemp[i] + " °C\t\tMin: " + minTemp[i] + " °C");
+            System.out.println("Day " + (i+1) + "\t\tMax: " + maxTemp[i] + " °C\t\tMin: " + minTemp[i] + " °C");
     }
 }
